@@ -1,0 +1,162 @@
+<div class="fade-in-left h-full mt-8">
+  <div class="grid container mx-auto p-5 text-xs">
+    <div class="w-full md:w-11/12 mx-auto rounded shadow-sm bg-white border">
+      <h1 class="text-2xl text-center font-bold text-gray-500 mt-2">
+        <%= Projects::Myora[:self] %> <i class="far fa-clock text-green-500"></i>
+      </h1>
+      <hr class="my-2" />
+      <div class="grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-2 w-11/12 mx-auto">
+        <% Projects::Myora[:tools].each do |tool| %>
+          <div class="bg-blue-400 rounded"><%= tool %></div>
+        <% end %>
+      </div>
+      <div class="w-full md:w-11/12 mx-auto text-sm text-gray-500 my-3">
+        <%= Projects::Myora[:description] %>
+      </div>
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+        <div class="grid grid-cols-10 border rounded">
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
+            <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
+          </div>
+          <div class="col-span-8">
+            <% Projects::Myora[:images].each_with_index do |image, index| %>
+              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::Myora[:images].count %>">
+                <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
+                  <%= image_tag image, class: "img-fluid slideshow" %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded">
+            <button data-action="slideshow#next"><i class="fas fa-arrow-alt-circle-right fa-2x"></i></button>
+          </div>
+        </div>
+        <div class="mt-4 d-flex justify-center">
+
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="w-full md:w-11/12 mx-auto rounded shadow-sm bg-white border">
+      <h1 class="text-2xl text-center font-bold text-gray-500 mt-2">
+        <%= link_to "https://foodtalk.org", target: "_blank" do %>
+          <%= Projects::Foodtalk[:self] %>
+          <i class="fas fa-utensils text-yellow-500 ml-1"></i>
+        <% end %>
+      </h1>
+      <hr class="my-2" />
+      <div class="grid grid-flow-row grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-2 w-11/12 mx-auto">
+        <% Projects::Foodtalk[:tools].each do |tool| %>
+          <div class="bg-blue-400 rounded"><%= tool %></div>
+        <% end %>
+      </div>
+      <div class="w-full md:w-11/12 mx-auto text-sm text-gray-500 my-3">
+        <%= Projects::Foodtalk[:description] %>
+      </div>
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+        <div class="grid grid-cols-10 border rounded">
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
+            <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
+          </div>
+          <div class="col-span-8">
+            <% Projects::Foodtalk[:images].each_with_index do |image, index| %>
+              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::Foodtalk[:images].count %>">
+                <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
+                  <%= image_tag image, class: "img-fluid slideshow" %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded">
+            <button data-action="slideshow#next"><i class="fas fa-arrow-alt-circle-right fa-2x"></i></button>
+          </div>
+        </div>
+        <div class="mt-4 d-flex justify-center">
+
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="w-full md:w-11/12 mx-auto rounded shadow-sm bg-white border">
+      <%= link_to "http://www.mygenerationfitness.com", target: "_blank" do %>
+        <h1 class="text-2xl text-center font-bold text-gray-500 mt-2">
+          <%= Projects::GenerationFitness[:self] %>
+          <i class="fas fa-dumbbell text-red-500 ml-1"></i>
+        </h1>
+      <% end %>
+      <hr class="my-2" />
+      <div class="grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-2 w-11/12 mx-auto flex justify-center">
+        <% Projects::GenerationFitness[:tools].each do |tool| %>
+          <div class="bg-blue-400 rounded"><%= tool %></div>
+        <% end %>
+      </div>
+      <div class="w-full md:w-11/12 mx-auto text-sm text-gray-500 my-3">
+        <%= Projects::GenerationFitness[:description] %>
+      </div>
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+        <div class="grid grid-cols-10 border rounded">
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
+            <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
+          </div>
+          <div class="col-span-8">
+            <% Projects::GenerationFitness[:images].each_with_index do |image, index| %>
+              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::GenerationFitness[:images].count %>">
+                <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
+                  <%= image_tag image, class: "img-fluid slideshow" %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded">
+            <button data-action="slideshow#next"><i class="fas fa-arrow-alt-circle-right fa-2x"></i></button>
+          </div>
+        </div>
+        <div class="mt-4 d-flex justify-center">
+
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="w-full md:w-11/12 mx-auto rounded shadow-sm bg-white border">
+      <%= link_to "http://www.mygenerationfitness.com", target: "_blank" do %>
+        <h1 class="text-2xl text-center font-bold text-gray-500 mt-2">
+          <%= Projects::AdamGoodman[:self] %>
+          <i class="fas fa-smile text-green-500 ml-1"></i>
+        </h1>
+      <% end %>
+      <hr class="my-2" />
+      <div class="grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-2 w-11/12 mx-auto flex justify-center">
+        <% Projects::AdamGoodman[:tools].each do |tool| %>
+          <div class="bg-blue-400 rounded"><%= tool %></div>
+        <% end %>
+      </div>
+      <div class="w-11/12 mx-auto text-sm text-gray-500 my-3">
+        <%= Projects::AdamGoodman[:description] %>
+      </div>
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+        <div class="grid grid-cols-10 border rounded">
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
+            <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
+          </div>
+          <div class="col-span-8">
+            <% Projects::AdamGoodman[:images].each_with_index do |image, index| %>
+              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::AdamGoodman[:images].count %>">
+                <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
+                  <%= image_tag image, class: "img-fluid slideshow" %>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+          <div class="h-full flex items-center justify-center bg-gray-50 rounded">
+            <button data-action="slideshow#next"><i class="fas fa-arrow-alt-circle-right fa-2x"></i></button>
+          </div>
+        </div>
+        <div class="mt-4 d-flex justify-center">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

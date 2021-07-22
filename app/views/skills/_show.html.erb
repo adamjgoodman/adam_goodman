@@ -1,0 +1,12 @@
+<div class="fade-in-left grid grid-cols-3 md:grid-cols-5 w-full mx-auto justify-center my-8">
+  <% StaticsHelper::SKILLS.each do |skill| %>
+    <div class="font-bold text-sm p-5 items-center flex flex-col">
+      <div class="bg-white bg-opacity-75 rounded-full p-4 shadow-md hover:shadow-none">
+        <%= image_tag skill[:icon], width: 50, height: 50, referrerpolicy: "no-referrer" %>
+      </div>
+      <div class="my-5">
+        <%= skill[:title] %>
+      </div>
+    </div>
+  <% end %>
+</div>

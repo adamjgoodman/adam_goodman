@@ -1,0 +1,22 @@
+<nav class="text-white text-center text-lg font-bold cursor-pointer border shadow-md rounded-md">
+  <%= link_to skills_path, data: { action: "ajax:success->application#navigate", remote: true } do %>
+    <div class="p-5 rounded hover:bg-white hover:bg-opacity-50 hover:text-green-400">
+      Skills & Tools
+    </div>
+  <% end %>
+  <%= link_to web_applications_path, data: { action: "ajax:success->application#navigate", remote: true } do %>
+    <div class="p-5 rounded hover:bg-white hover:bg-opacity-50 hover:text-green-400">
+      Web Applications
+    </div>
+  <% end %>
+  <%= link_to resume_path, data: { action: "ajax:success->application#navigate", remote: true } do %>
+    <div class="p-5 rounded hover:bg-white hover:bg-opacity-50 hover:text-green-400">
+      Resume
+    </div>
+  <% end %>
+  <%= link_to contact_path, data: { action: "ajax:success->application#navigate", remote: true } do %>
+    <div class="p-5 rounded hover:bg-white hover:bg-opacity-50 hover:text-green-400">
+      Contact
+    </div>
+  <% end %>
+</nav>

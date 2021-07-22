@@ -1,0 +1,35 @@
+<div data-controller="application" class="bg-white h-full flex flex-col w-full text-white">
+  <div class="h-full bg-gradient-to-r h from-green-400 to-blue-500">
+    <div class="px-4 pt-8">
+      <div class="grid grid-cols-12">
+        <div class="block md:hidden col-span-12 grid grid-cols-2 border-b mb-3">
+          <div class="px-4">
+            <%= image_tag "me.png", class: "pt-3 shadow-b max-w-full h-auto align-middle" %>
+          </div>
+          <div>
+            <%= render partial: "nav" %>
+          </div>
+        </div>
+        <div class="hidden md:block col-span-3 xl:col-span-2">
+          <div class="flex flex-wrap justify-center">
+            <div class="px-4">
+              <%= image_tag "me.png", class: "pt-3 shadow-b max-w-full h-auto align-middle" %>
+            </div>
+            <%= render partial: "nav" %>
+          </div>
+        </div>
+        <div class="relative w-full text-center col-span-12 md:col-span-9 xl:col-span-10">
+          <div class="font-bold text-5xl lg:text-8xl mb-3">
+            Adam Goodman
+          </div>
+          <div class="text-xl lg:text-4xl font-thin justify-center flex px-16">
+            Full Stack Ruby on Rails Developer
+          </div>
+          <div class="xs:w-full lg:w-4/5 mx-auto" data-application-target="navigation modal">
+            <%= render partial: "skills/show" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
