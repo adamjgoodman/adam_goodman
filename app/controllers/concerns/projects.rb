@@ -39,7 +39,7 @@ module Projects
     "images": [
       'foodtalk_1.gif',
       'foodtalk_2.gif',
-      'foodtalk_3'
+      'foodtalk_3.gif'
     ],
     "description": "An online education platform dedicated to eLearning for SNAP eligible Georgia residents.  Home for health and fitness articles and nutritious recipes from University of Georgia's College of Family and Consumer Sciences.  Full administrative console for user statistics, reporting, CSV exports, and data management."
   }.freeze
