@@ -5,12 +5,12 @@
     </div>
   <% end %>
   <%= link_to web_applications_path, data: { action: "ajax:success->application#navigate", remote: true } do %>
-    <div class="p-5 rounded hover:bg-white hover:bg-opacity-50 hover:text-green-400">
+    <div class="p-5 hover:bg-white hover:bg-opacity-50 hover:text-green-400">
       Web Applications
     </div>
   <% end %>
   <%= link_to resume_path, data: { action: "ajax:success->application#navigate", remote: true } do %>
-    <div class="p-5 rounded hover:bg-white hover:bg-opacity-50 hover:text-green-400">
+    <div class="p-5 hover:bg-white hover:bg-opacity-50 hover:text-green-400">
       Resume
     </div>
   <% end %>

@@ -13,14 +13,14 @@
       <div class="w-full md:w-11/12 mx-auto text-sm text-gray-500 my-3">
         <%= Projects::Myora[:description] %>
       </div>
-      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 md:w-4/5 mx-auto tex-sm text-blue-400 my-3">
         <div class="grid grid-cols-10 border rounded">
           <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
             <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
           </div>
           <div class="col-span-8">
             <% Projects::Myora[:images].each_with_index do |image, index| %>
-              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::Myora[:images].count %>">
+              <div class="fade-in-left bg-gray-50" data-slideshow-target="slide" id="<%= index + 1 == Projects::Myora[:images].count %>">
                 <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
                   <%= image_tag image, class: "img-fluid slideshow" %>
                 <% end %>
@@ -53,14 +53,14 @@
       <div class="w-full md:w-11/12 mx-auto text-sm text-gray-500 my-3">
         <%= Projects::Foodtalk[:description] %>
       </div>
-      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 md:w-4/5 mx-auto tex-sm text-blue-400 my-3">
         <div class="grid grid-cols-10 border rounded">
           <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
             <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
           </div>
           <div class="col-span-8">
             <% Projects::Foodtalk[:images].each_with_index do |image, index| %>
-              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::Foodtalk[:images].count %>">
+              <div class="fade-in-left bg-gray-50" data-slideshow-target="slide" id="<%= index + 1 == Projects::Foodtalk[:images].count %>">
                 <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
                   <%= image_tag image, class: "img-fluid slideshow" %>
                 <% end %>
@@ -93,14 +93,14 @@
       <div class="w-full md:w-11/12 mx-auto text-sm text-gray-500 my-3">
         <%= Projects::GenerationFitness[:description] %>
       </div>
-      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 md:w-4/5 mx-auto tex-sm text-blue-400 my-3">
         <div class="grid grid-cols-10 border rounded">
           <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
             <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
           </div>
           <div class="col-span-8">
             <% Projects::GenerationFitness[:images].each_with_index do |image, index| %>
-              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::GenerationFitness[:images].count %>">
+              <div class="fade-in-left bg-gray-50" data-slideshow-target="slide" id="<%= index + 1 == Projects::GenerationFitness[:images].count %>">
                 <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
                   <%= image_tag image, class: "img-fluid slideshow" %>
                 <% end %>
@@ -135,14 +135,14 @@
       <div class="w-11/12 mx-auto text-sm text-gray-500 my-3">
         <%= Projects::AdamGoodman[:description] %>
       </div>
-      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 mx-auto tex-sm text-blue-400 my-3">
+      <div data-controller="slideshow" data-slideshow-index-value="0" class="w-11/12 md:w-4/5 mx-auto tex-sm text-blue-400 my-3">
         <div class="grid grid-cols-10 border rounded">
           <div class="h-full flex items-center justify-center bg-gray-50 rounded shadow-sm">
             <button data-action="slideshow#previous"><i class="fas fa-arrow-alt-circle-left fa-2x"></i></button>
           </div>
           <div class="col-span-8">
             <% Projects::AdamGoodman[:images].each_with_index do |image, index| %>
-              <div class="fade-in-left" data-slideshow-target="slide" id="<%= index + 1 == Projects::AdamGoodman[:images].count %>">
+              <div class="fade-in-left bg-gray-50" data-slideshow-target="slide" id="<%= index + 1 == Projects::AdamGoodman[:images].count %>">
                 <%= link_to modal_path(image: image), data: { action: "ajax:success->application#modal", remote: true } do %>
                   <%= image_tag image, class: "img-fluid slideshow" %>
                 <% end %>
