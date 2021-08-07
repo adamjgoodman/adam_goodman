@@ -17,7 +17,7 @@ module Projects
       'myora_1.gif',
       'myora_2.gif'
     ],
-    "description": 'A Ruby on Rails application for casual or profressional free time-keeping.  Organize your project timesheets, collaborate with a team, watch your expected earnings grow with every entry in real time.'
+    "description": 'A Ruby on Rails application for casual or professional free time-keeping.  Organize your project timesheets, collaborate with a team, watch your expected earnings grow with every entry in real time.'
   }.freeze
 
   Foodtalk = {
